@@ -1498,7 +1498,7 @@ local Library do
                     BorderColor3 = FromRGB(0, 0, 0),
                     Size = UDim2New(1, 0, 0, 2),
                     BorderSizePixel = 0,
-                    BackgroundColor3 = FromRGB(31, 226, 130)
+                    BackgroundColor3 = FromRGB(255, 182, 193)
                 })  Items["Liner"]:AddToTheme({BackgroundColor3 = "Accent"})
 
                 Instances:Create("UIGradient", {
@@ -1541,7 +1541,7 @@ local Library do
                     Size = UDim2New(1, 0, 0, 2),
                     ZIndex = 2,
                     BorderSizePixel = 0,
-                    BackgroundColor3 = FromRGB(56, 56, 56)
+                    BackgroundColor3 = FromRGB(255, 182, 193)
                 })  Items["Liner"]:AddToTheme({BackgroundColor3 = "Dark Liner"})
 
                 Instances:Create("UIGradient", {
@@ -1565,7 +1565,7 @@ local Library do
                     Name = "\0",
                     Size = UDim2New(1, 2, 0, 0),
                     BorderSizePixel = 0,
-                    BackgroundColor3 = FromRGB(31, 226, 130)
+                    BackgroundColor3 = FromRGB(255, 182, 193)
                 })  Items["Glow"]:AddToTheme({BackgroundColor3 = "Accent"})
 
                 Instances:Create("UIGradient", {
