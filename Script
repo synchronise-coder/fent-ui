@@ -4763,6 +4763,29 @@ local Library do
                 end
             end
 
+function ResizeWindow(Window, scale, makeSquare)
+    if not Window or not Window.Items or not Window.Items.Inline then
+        warn("ResizeWindow: Invalid window.")
+        return
+    end
+
+    -- update scale
+    Window.Scale = scale or Window.Scale
+
+    -- compute scaled size
+    local newX = Window.BaseSize.X * Window.Scale
+    local newY = Window.BaseSize.Y * Window.Scale
+
+    -- rectangular or square mode
+    if makeSquare then
+        local side = math.min(newX, newY)   -- always keep smallest side
+        newX, newY = side, side
+    end
+
+    -- apply
+    Window.Items.Inline.Instance.Size = UDim2.new(0, newX, 0, newY)
+end
+
             function PlayerData:Set()
                 PlayerData.Selected = not PlayerData.Selected
 
