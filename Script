@@ -4763,15 +4763,6 @@ local Library do
                 end
             end
 
-function SetWindowSize(Window, width, height)
-    if not Window or not Window.Items or not Window.Items.Inline or not Window.Items.Inline.Instance then
-        warn("SetWindowSize: invalid window")
-        return
-    end
-    
-    Window.Items.Inline.Instance.Size = UDim2.new(0, width, 0, height)
-end
-
             function PlayerData:Set()
                 PlayerData.Selected = not PlayerData.Selected
 
